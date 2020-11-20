@@ -7,22 +7,23 @@ using namespace std;
 
 class Juegos{
 	private:
+		//atributos de la clase hija juegos
 		string nombrej;
 		int numeroj;
 		int logros; 
 		
 	public:
+		//constructores de la clase hija juegos
 		Juegos(): nombrej(""), numeroj (0), logros(0){}; //por default
 		Juegos(string nomj, int numj, float log): nombrej (nomj), numeroj(numj), logros(log){};
 		
-		//void crece(float);
 		
 		string get_nombrej();
 		int get_numeroj(); 
 		int get_logros();
 		
 		void set_nombrej(string);
-		
+		//void AgregarJuegos(int);
 };
 
 //getters 
@@ -44,3 +45,11 @@ void Juegos::set_nombrej(string name){
 	nombrej=name;
 }
 
+/*void Juegos::AgregarJuegos(int games){
+	for(i=0; i<games;i++){
+		int aux;
+		cout<<"Juegos: ";
+		cin>>aux;
+		juegos[i]=aux;
+	}
+}*/

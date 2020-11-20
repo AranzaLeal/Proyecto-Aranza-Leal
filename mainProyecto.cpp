@@ -2,7 +2,7 @@
 //Aranza Leal Aguirre
 //A01751706
 
-#include "play.h"
+#include "musica.h"
 #include "juegos.h"
 #include "multimedia.h"
 #include <iostream>
@@ -10,14 +10,14 @@ using namespace std;
 
 int main(){
 	//Primera Clase play.h
-	Play a1("Cuenta de Quique" , 4567, 896.34);
-	cout<<a1.get_nombre()<<"\t"<<a1.get_amigos()<<"\t"<<a1.get_saldo()<<"\t"<<endl;
+	Musica a1("Musica de Quique" , 4567, 896.34);
+	cout<<a1.get_nombre()<<"\t"<<a1.get_canciones()<<"\t"<<a1.get_espacioDisponible()<<"\t"<<endl;
 	
-	Play b2("Cuenta de Aranza" , 5, 87.00);
-	cout<<b2.get_nombre()<<"\t"<<b2.get_amigos()<<"\t"<<b2.get_saldo()<<"\t"<<endl;
+	Musica b2("Musica de Aranza" , 5, 87.00);
+	cout<<b2.get_nombre()<<"\t"<<b2.get_canciones()<<"\t"<<b2.get_espacioDisponible()<<"\t"<<endl;
 	
-	Play c3("Cuenta de Michel" , 45, 56.21);
-	cout<<c3.get_nombre()<<"\t"<<c3.get_amigos()<<"\t"<<c3.get_saldo()<<"\t"<<endl;
+	Musica c3("Musica de Michel" , 45, 56.21);
+	cout<<c3.get_nombre()<<"\t"<<c3.get_canciones()<<"\t"<<c3.get_espacioDisponible()<<"\t"<<endl;
 	
 	//SegundaClase juegos.h
 	Juegos d4("Videojuegos de Quique" , 4, 89);
