@@ -10,7 +10,8 @@ using namespace std;
 
 int main(){
 	//Primera Clase play.h
-	Musica a1("Musica de Quique" , 4567, 896.34);
+	Musica a1("Musica de Quique" , 0, 896.34);
+	a1.agregarCanciones(4);
 	cout<<a1.get_nombre()<<"\t"<<a1.get_canciones()<<"\t"<<a1.get_espacioDisponible()<<"\t"<<endl;
 	
 	Musica b2("Musica de Aranza" , 5, 87.00);
@@ -40,3 +41,4 @@ int main(){
 	cout<<i9.get_entretenimiento()<<"\t"<<i9.get_aplicaciones()<<"\t"<<i9.get_memoria()<<"\t"<<endl;
 	
 }
+
