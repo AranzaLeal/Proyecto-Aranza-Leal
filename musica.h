@@ -17,7 +17,7 @@ class Musica{
 		//Mientras que los métodos los ponemos en público.
 	public:
 		Musica(): nombre(""), canciones (0), espacioDisponible(0){}; //por default
-		Musica(string nom, int can, float esp): nombre (nom), canciones(can), espacioDisponible(esp){}; 
+		Musica(string nom, int can, float esp): nombre (nom), canciones(can), espacioDisponible(esp){};//Ipod((nombre,999)
 		//Se nos mostraran las variables 
 		string get_nombre();
 		int get_canciones(); 

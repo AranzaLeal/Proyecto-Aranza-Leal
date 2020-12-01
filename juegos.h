@@ -15,7 +15,7 @@ class Juegos{
 	public:
 		//constructores de la clase hija juegos
 		Juegos(): nombrej(""), numeroj (0), logros(0){}; //por default
-		Juegos(string nomj, int numj, float log): nombrej (nomj), numeroj(numj), logros(log){};
+		Juegos(string nomj, int numj, float log): nombrej (nomj), numeroj(numj), logros(log){};//Ipod((nombre,999)
 		
 		
 		string get_nombrej();

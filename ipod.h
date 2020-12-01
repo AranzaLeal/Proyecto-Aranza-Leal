@@ -2,8 +2,8 @@
 //Aranza Leal Aguirre
 //A01751706
 
-#include ifndef IPOD_H_
-#defineIPOD_H_
+//include ifndef IPOD_H_
+//defineIPOD_H_
 
 #include "musica.h"
 #include "juegos.h"
@@ -16,11 +16,16 @@ class Ipod{
 	private:
 	
 		string nombreapp;
-		float saldo[10000];
+		float saldo;
+		float memoria;
 	public:
 	
-		Ipod(): nombreapp (""), saldo(0){};
-		Ipod(string nombre, float saldo): nombreapp(nombre), saldo(sald){};
+		//Ipod(): nombreapp (""), saldo(0), memoria(0){};
+		Ipod(string nombre, float sal, float memo){	
+			nombreapp=nombre;
+			saldo=sal;
+			memoria=memo;
+		}
 		
 		string getNombreapp(){
 			return nombreapp;
@@ -30,4 +35,4 @@ class Ipod{
 			return saldo;
 		}
 		
-}
+};
