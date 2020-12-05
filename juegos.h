@@ -13,20 +13,22 @@ class Juegos: public Aplicaciones{
 		//atributos de la clase hija juegos
 		string nombrejuegos;
 		int juego;
-		int numerojuegos[100];
 		int logros; 
 		
 	public:
 		//Constructores de la Clase Juegos
 		Juegos(): nombrejuegos(""), juego(0), logros(0){}; //por default
-		Juegos(string nomj, int jueg, int numj, float log): Aplicaciones(nombreapp, saldo, memoria){};//Añadimos al constructorde nustra clase padre
+		Juegos(string n, float s, float m,string nomj, int jueg, float log): Aplicaciones(n, s, m){ //Añadimos al constructorde nustra clase padre
+			nombrejuegos=nomj;
+			juego=jueg;
+			logros=log;
+		};
 		
 		//Metodos
 		string get_nombrejuegos();
-		int get_juego();
-		int get_numerojuegos(); 
+		int get_juego(); 
 		int get_logros();
-		
+		string printJuegos();
 		void set_nombrejuegos(string);
 		void agregarJuegos(int);
 };
@@ -52,13 +54,17 @@ void Juegos::set_nombrejuegos(string name){
 	nombrejuegos=name;
 }
 
+//Almacena mis atributos en una cadena de de texto
+string Juegos::printJuegos(){
+			std::stringstream k;
+			k << printApp() << "Nombre Juego: " << nombrejuegos << "\n";
+			k << "Juegos: " << juego << "\n";
+			k <<"Logros: "  << logros<< "\n";
+			return k.str();
+		}
+
 //Funcion que añade juegos a través de un contador 
-void Juegos::agregarJuegos(int games){
-	for(int i=0; i<games;i++){
-		cout<<"Juegos: ";
-		cin>>numerojuegos[juego];
-		juego++;
-	}
-}
+
+
 
 #endif //JUEGOS_H_

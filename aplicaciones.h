@@ -6,6 +6,7 @@
 
 #include <string>
 #include <iostream>
+#include <sstream>
 
 using namespace std;
 
@@ -29,7 +30,8 @@ class Aplicaciones {
         string getNombreapp();
 		float getSaldo();
         float getMemoria();
-        
+		
+		string printApp();        
 };
 
  //Constructor por default
@@ -42,11 +44,9 @@ Aplicaciones::Aplicaciones(){
 
 //Constructor con valores para llenar las variables de instancia 
 Aplicaciones::Aplicaciones(string name, float sal,float memo){
-
-    nombreapp=name;
-	saldo=sal;
-	memoria=memo;
-
+    nombreapp = name;
+	saldo = sal;
+	memoria = memo;
 }
 
 //Getters
@@ -65,6 +65,13 @@ float Aplicaciones::getSaldo(){
 //get de memoria 
 float Aplicaciones::getMemoria(){
 	return memoria;
+}
+
+string Aplicaciones::printApp(){
+	stringstream a;
+	a << "Nombre: " << nombreapp << "\nSaldo: " << saldo << "\n";
+	a << "Memorria: " << "\n";
+	return a.str();
 }
 	
 #endif //APLICACIONES_H_

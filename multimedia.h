@@ -7,6 +7,8 @@
 //Incluimos el programa de Aplicaciones, ya que es nuetsra clase padre 
 #include "aplicaciones.h"
 #include <iostream>
+#include <sstream>
+#include <string>
 using namespace std;
 //Clase Multimedia es una clase hija de la clase aplicaciones
 class Multimedia: public Aplicaciones{ //Traemos a la Clase Aplicaciones 
@@ -18,7 +20,10 @@ class Multimedia: public Aplicaciones{ //Traemos a la Clase Aplicaciones
 	public:
 		//Construcotes de la Clase Multimedia
 		Multimedia();//Constructor por default
-		Multimedia(string entre, int med):Aplicaciones(nombreapp, saldo,memoria){};//Añadimos al constructorde nustra clase padre
+		Multimedia(string n, float s, float m, string ent, int med):Aplicaciones(n, s, m){
+			entretenimiento = ent;
+			medios = med;
+		};//Añadimos al constructorde nustra clase padre
 		
 		
 		//Metodos de la Clase Multimedia
@@ -26,7 +31,12 @@ class Multimedia: public Aplicaciones{ //Traemos a la Clase Aplicaciones
 		int getMedios(); 
 		void setEntretenimiento(string);
 		
+		string printMultimedia();		
 };
+		Multimedia::Multimedia(){
+			entretenimiento = " ";		
+			medios = 0;
+		}
 
 //getters 
 		//get de entretenimiento
@@ -45,7 +55,13 @@ class Multimedia: public Aplicaciones{ //Traemos a la Clase Aplicaciones
 		void Multimedia::setEntretenimiento(string visual){
 			entretenimiento=visual;
 		}
-
-
-
+		
+		//Almacena mis atributos en una cadena de de texto
+		string Multimedia::printMultimedia(){
+			std::stringstream v;
+			v << printApp() << "Entretenimiento: " << entretenimiento << "\n";
+			v << "Medios: " << medios << "\n";
+			return v.str();
+		}
+		
 #endif //MULTIMEDIA_H_
