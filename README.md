@@ -5,7 +5,7 @@ Este proyecto fue desarrollado para llevar ver los datos del IPod de los usuario
 En usuario común le gustaría saber que pasa con el alamacenamiento de su Ipod, para que el usuario tenga un poco mas de comprensión en la situación, la información se ha separado En tres grandes áreas: Música, Videojuegos y multimedia, para que de esta manera, la informacion se le presente de una manera mucho más organizada y entendible al usuario.
 
 # Funcionalidad
-Visualizar la informacion contenida en el Ipod y ver como al añadir diferentes objetos, afecta a la memoria y al almacen disponible.
+Visualizar la informacion contenida en un Ipod con n número de aplicaciones y mostrar la memoria y saldo de éste.
 
 # Consideraciones
 Solo corre en c++
