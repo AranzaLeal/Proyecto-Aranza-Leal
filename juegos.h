@@ -1,55 +1,64 @@
-//Creación de Objetos para Proyecto: Clase 2
+// PROYECTO INTEGRADOR: PENSAMIENTO COMPUTACIONAL ORIENTADO A OBJETOS
 //Aranza Leal Aguirre
 //A01751706
-
+#ifndef JUEGOS_H_
+#define JUEGOS_H_
+//Incluimos el programa de Aplicaciones, ya que es nuetsra clase padre 
+#include "aplicaciones.h"
 #include <iostream>
 using namespace std;
-
-class Juegos{
+//Clase Juegos es una clase hija de la Clase Aplicaciones 
+class Juegos: public Aplicaciones{
 	private:
 		//atributos de la clase hija juegos
-		string nombrej;
-		int numeroj;
+		string nombrejuegos;
+		int juego;
+		int numerojuegos[100];
 		int logros; 
 		
 	public:
-		//constructores de la clase hija juegos
-		Juegos(): nombrej(""), numeroj (0), logros(0){}; //por default
-		Juegos(string nomj, int numj, float log): nombrej (nomj), numeroj(numj), logros(log){};//Ipod((nombre,999)
+		//Constructores de la Clase Juegos
+		Juegos(): nombrejuegos(""), juego(0), logros(0){}; //por default
+		Juegos(string nomj, int jueg, int numj, float log): Aplicaciones(nombreapp, saldo, memoria){};//Añadimos al constructorde nustra clase padre
 		
-		
-		string get_nombrej();
-		int get_numeroj(); 
+		//Metodos
+		string get_nombrejuegos();
+		int get_juego();
+		int get_numerojuegos(); 
 		int get_logros();
 		
-		void set_nombrej(string);
-		//void AgregarJuegos(int);
+		void set_nombrejuegos(string);
+		void agregarJuegos(int);
 };
 
 //getters 
-string Juegos::get_nombrej(){
-	return nombrej;
+// get de nombrejuegos
+string Juegos::get_nombrejuegos(){
+	return nombrejuegos;
+}
+//get de juego
+int Juegos::get_juego(){
+	return juego;
 }
 
-int Juegos::get_numeroj(){
-	return numeroj;
-}
-
-
+//get logros
 int Juegos::get_logros(){
 	return logros;
 }
 
 //setters
-void Juegos::set_nombrej(string name){
-	nombrej=name;
+//set de nombrejuegos
+void Juegos::set_nombrejuegos(string name){
+	nombrejuegos=name;
 }
 
-/*void Juegos::AgregarJuegos(int games){
-	for(i=0; i<games;i++){
-		int aux;
+//Funcion que añade juegos a través de un contador 
+void Juegos::agregarJuegos(int games){
+	for(int i=0; i<games;i++){
 		cout<<"Juegos: ";
-		cin>>aux;
-		juegos[i]=aux;
+		cin>>numerojuegos[juego];
+		juego++;
 	}
-}*/
+}
+
+#endif //JUEGOS_H_

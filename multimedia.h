@@ -1,57 +1,51 @@
-//Creación de Objetos para Proyecto: Clase 2
+// PROYECTO INTEGRADOR: PENSAMIENTO COMPUTACIONAL ORIENTADO A OBJETOS
 //Aranza Leal Aguirre
 //A01751706
-//#include ifndef MULTIMEDIA_H_
+
+#ifndef MULTIMEDIA_H_
 #define MULTIMEDIA_H_
-#include "ipod.h"
+//Incluimos el programa de Aplicaciones, ya que es nuetsra clase padre 
+#include "aplicaciones.h"
 #include <iostream>
 using namespace std;
-
-class Multimedia: public Ipod {
+//Clase Multimedia es una clase hija de la clase aplicaciones
+class Multimedia: public Aplicaciones{ //Traemos a la Clase Aplicaciones 
 	private:
-		//atributos de la clase multimedia 
+		//Atributos de la Clase Multimedia 
 		string entretenimiento;
-		int aplicaciones; 
+		int medios; 
 		
 	public:
-		//construcotes de la clase multimedia
-		//Multimedia(): entretenimiento(""), aplicaciones (0){}; //por default
-		Multimedia(string nombre, float sal, float memo, string entret, int apps):Ipod(nombre,999,128){
-			entretenimiento=entret;
-			aplicaciones=apps;
-		}
+		//Construcotes de la Clase Multimedia
+		Multimedia();//Constructor por default
+		Multimedia(string entre, int med):Aplicaciones(nombreapp, saldo,memoria){};//Añadimos al constructorde nustra clase padre
 		
 		
-		//funciones
-		string entretenimiento();
-		int aplicaciones(); 
-
-		
+		//Metodos de la Clase Multimedia
+		string getEntretenimiento();
+		int getMedios(); 
 		void setEntretenimiento(string);
-		//void AgregarMemoria(float)
+		
 };
 
 //getters 
-		string getEntretenimiento(){
+		//get de entretenimiento
+		string Multimedia::getEntretenimiento(){
 			return entretenimiento;
 		}
-
-		int getAplicaciones(){
-			return aplicaciones;
+		
+		//get de medios
+		int Multimedia::getMedios(){
+			return medios;
 		}
 
 
 //setters
-		void setEntretenimiento(string visual){
+		//set de entretenimiento
+		void Multimedia::setEntretenimiento(string visual){
 			entretenimiento=visual;
 		}
 
-/*void Multimedia::AgregarMemoria(float memory){
-	for(i=0; i<memory;i++){
-		int aux;
-		cout<<"Memoria: ";
-		cin>>aux;
-		canciones[i]=aux;
-	}
-}*/
-};
+
+
+#endif //MULTIMEDIA_H_
