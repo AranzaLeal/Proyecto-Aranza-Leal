@@ -29,6 +29,10 @@ int main(){
 	mp3.ejemploMusica();
 	cout<<"Informacion sobre la música del iPod"<<"\n";
 	mp3.muestraMusica();
+	mp3.sumaMemoria();
+	mp3.sumaSaldo();
+	cout<<"Información del Ipod"<<"\n";
+	mp3.muestraIpod();
 	
 	return 0;	
 }
